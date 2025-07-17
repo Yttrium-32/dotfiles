@@ -28,6 +28,7 @@ DEPS += stow \
 		zoxide \
 		eza \
 		fd \
+		pre-commit \
 		yay \
 		mpv \
 		yt-dlp \
