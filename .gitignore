@@ -1,0 +1,4 @@
+logs/
+.git-credentials
+state
+error.log
