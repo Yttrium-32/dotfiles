@@ -2,6 +2,7 @@ Makefile
 README.md
 .git
 .gitignore
+.pre-commit-config.yaml
 
 .+~
 .+,v

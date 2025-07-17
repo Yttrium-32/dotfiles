@@ -3,6 +3,8 @@ This repo stores all the config files that aren't updated often enough to need
 their own repo. Requires the use of [GNU stow](https://www.gnu.org/software/stow/)
 and [GNU make](https://www.gnu.org/software/make/)
 
+Pre-commit hook needs [pre-commit](https://pre-commit.com/#install) to be installed.
+
 The dependency list can easily be edited in the Makefile. Simply add or remove
 packages to `DEPS` for main repo packages, or to `AUR_DEPS` for AUR packages.
 
