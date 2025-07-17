@@ -21,35 +21,35 @@ packages.
 ## Usage
 #### Print this file:
 ```bash
-    make help
+make help
 ```
 
 #### Install and symlink everything
 ```bash
-   make all
+make all
 ```
 
 #### Install all dependencies (including fonts):
 ```bash
-   make alldeps
+make alldeps
 ```
 
 #### Install just the fonts:
 ```bash
-    make fonts
+make fonts
 ```
 
 #### Install packages from the main repo:
 ```bash
-    make deps
+make deps
 ```
 
 #### Symlink config files
 ```bash
-    make install
+make install
 ```
 
 #### Delete all symlinks
 ```bash
-    make clean
+make clean
 ```
