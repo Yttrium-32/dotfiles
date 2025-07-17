@@ -1,0 +1,55 @@
+[user]
+    name = Shresth Prasad
+    email = shresthprasad7@gmail.com
+
+[init]
+    defaultBranch = main
+
+[commit]
+    template = ~/.config/git/template
+    vebose = true
+
+[core]
+    compression = 9
+    whitespace = error
+    preloadindex = true
+    editor = nvim
+
+[color]
+    ui = true
+
+[alias]
+    lg = log --oneline --graph --decorate
+    ls-tags = log --date-order --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
+
+[format]
+    signoff = true
+
+[sendemail]
+    smtpServer = smtp.gmail.com
+    smtpServerPort = 587
+    smtpEncryption = tls
+    smtpUser = shresthprasad7@gmail.com
+
+[credential]
+    helper = store --file=~/.config/git/.git-credentials
+
+[difftool]
+    prompt = true
+
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
+
+[interactive]
+    singlekey = true
