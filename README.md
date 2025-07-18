@@ -18,6 +18,12 @@ To modify the packages for installation edit the `Makefile`. Simply add or
 remove packages to `DEPS` for main repo packages, or to `AUR_DEPS` for AUR
 packages.
 
+### Conky weather widget
+To the `dot-config/conky/scripts/` directory add a `.env` with the values
+`API_KEY` and `CITY_ID` set.
+
+To find your city id look here: https://openweathermap.org/find
+
 ## Usage
 #### Print this file:
 ```bash
