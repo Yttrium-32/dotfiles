@@ -6,7 +6,7 @@
 
 # Load .env
 set -a
-source ~/.config/openweather.env
+source ./.env
 set +a
 
 # Check for missing values
