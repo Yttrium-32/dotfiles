@@ -58,8 +58,6 @@ _set_liveuser_PS1() {
 _set_liveuser_PS1
 unset -f _set_liveuser_PS1
 
-[[ "$(whoami)" = "root" ]] && return
-
 # limits recursive functions, see 'man bash'
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100
 
