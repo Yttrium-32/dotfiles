@@ -1,23 +1,13 @@
 #
 # ~/.bashrc
 #
-#export GTK_IM_MODULE='fcitx'
-#export QT_IM_MODULE='fcitx'
-#export SDL_IM_MODULE='fcitx'
-#export XMODIFIERS='@im=fcitx'
-#export GLFW_IM_MODULE=ibus
-
-export TERM='kitty'
-export TERMINAL='kitty'
-export EDITOR='nvim'
-
-# Chnage default git config directory
+# Change default git config directory
 alias git="GIT_CONFIG_GLOBAL=~/.config/git/.gitconfig git"
 
-# Change cgdb config directory
+# Change CGDB config directory
 alias cgdb="CGDB_DIR=~/.config/cgdb cgdb"
 
-# Use c99 by default
+# Use C99 by default
 alias gcc="gcc -std=c99 -pedantic"
 
 # safer copy and move with rsync
@@ -37,20 +27,8 @@ alias sl="echo 'correcting to ls' && ls"
 alias ls="eza --icons --color=auto --group-directories-first -a"
 alias ll='eza --icons --group-directories-first -la'   # show long listing of all except ".."
 
-# To make hidpi work better
-#export GDK_SCALE=2
-#export QT_AUTO_SCREEN_SCALE_FACTOR=1
-#export QT_SCREEN_SCALE_FACTORS=2
-
 # Allow any key start software flow control
 stty ixany
-
-# Increase size of .bash_histroy
-export HISTSIZE=20000
-export HISTFILESIZE=20000
-
-# Ignore duplicates in .bash_histroy
-export HISTCONTROL=ignoredups:erasedups
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -72,18 +50,8 @@ unset -f _set_liveuser_PS1
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-PATH=$PATH:~/.local/bin
-
 # Initialise zoxide tell it to replace cd
 eval "$(zoxide init --cmd cd bash)"
 # echo file path before navigating to it
 export _ZO_ECHO=1
 
-export __GL_SHADER_DISK_CACHE_PATH="~/.local/share/nv"
-
-# CUDA Setup
-PATH=$PATH:/opt/cuda/bin${PATH:+:${PATH}}
-LD_LIBRARY_PATH=/opt/cuda/lib64
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/targets/x86_64-linux/lib/libcudart.so
-
-#export PYTHONPATH=/usr/lib/python3.13:/usr/lib/python3.13/lib-dynload
