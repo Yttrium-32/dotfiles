@@ -11,6 +11,9 @@ export TERM='kitty'
 export TERMINAL='kitty'
 export EDITOR='nvim'
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # Change default git config directory
 alias git="GIT_CONFIG_GLOBAL=~/.config/git/.gitconfig git"
 
@@ -46,9 +49,6 @@ export HISTFILESIZE=20000
 
 # Ignore duplicates in .bash_history
 export HISTCONTROL=ignoredups:erasedups
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
 
 _set_liveuser_PS1() {
     #PS1='[\u@\h \W]\$ '
