@@ -25,37 +25,12 @@ To the `dot-config/conky/scripts/` directory add a `.env` with the values
 To find your city ID look here: https://openweathermap.org/find
 
 ## Usage
-#### Print this file:
-```bash
-make help
-```
-
-#### Install and symlink everything
-```bash
-make all
-```
-
-#### Install all dependencies (including fonts):
-```bash
-make alldeps
-```
-
-#### Install just the fonts:
-```bash
-make fonts
-```
-
-#### Install packages from the main repo:
-```bash
-make deps
-```
-
-#### Symlink config files
-```bash
-make install
-```
-
-#### Delete all symlinks
-```bash
-make clean
-```
+| Command        | Description                                 |
+| -------------- | ------------------------------------------- |
+| `make help`    | Print usage instructions                    |
+| `make all`     | Install dependencies and symlink everything |
+| `make alldeps` | Install all dependencies (including fonts)  |
+| `make fonts`   | Install fonts only                          |
+| `make deps`    | Install packages from the main repo         |
+| `make install` | Symlink configuration files                 |
+| `make clean`   | Remove all symlinks                         |
