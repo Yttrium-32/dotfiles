@@ -22,7 +22,7 @@ packages.
 To the `dot-config/conky/scripts/` directory add a `.env` with the values
 `API_KEY` and `CITY_ID` set.
 
-To find your city id look here: https://openweathermap.org/find
+To find your city ID look here: https://openweathermap.org/find
 
 ## Usage
 #### Print this file:
