@@ -103,3 +103,6 @@ def_key "ctrl-u"
 
 def_key "ctrl-d"
     page_down
+
+def_key "ctrl-l"
+    show_lyrics
