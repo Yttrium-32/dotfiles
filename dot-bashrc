@@ -50,6 +50,15 @@ export HISTFILESIZE=20000
 # Ignore duplicates in .bash_history
 export HISTCONTROL=ignoredups:erasedups
 
+# ffmpeg command to compress videos with maximum compatibility
+ffcompress-video () {
+    ffmpeg -i "$1" \
+        -vf scale=1280:720 \
+        -c:v libx264 -profile:v baseline -crf 23 -preset slow \
+        -c:a aac -b:a 128k -movflags +faststart \
+        "$2"
+    }
+
 _set_liveuser_PS1() {
     #PS1='[\u@\h \W]\$ '
     PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\]\\$\[\] "
