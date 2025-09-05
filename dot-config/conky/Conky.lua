@@ -1,56 +1,56 @@
 conky.config = {
---  Based on ANTARES theme by Closebox73
+    --  Based on ANTARES theme by Closebox73
 
--- Size and Position settings --
-  alignment = 'bottom_left',
-  gap_x = 60,
-  gap_y = 60,
-  maximum_width = 500,
-  minimum_height = 400,
-  minimum_width = 500,
-  
--- Text settings --
-  use_xft = true,
-  font = 'Roboto:light:size=9',
-  
--- Color Settings --
-  default_color = 'white',
-  default_outline_color = 'white',
-  default_shade_color = 'white',
-  color1 = 'FFFFFF',
-  color2 = '7fff00',
-  
--- Window Settings --
-  background = false,
-  border_width = 1,
-  draw_borders = false,
-  draw_graph_borders = false,
-  draw_outline = false,
-  draw_shades = false,
-  own_window = true,
-  own_window_colour = '000000',
-  own_window_class = 'Conky',
-  own_window_argb_visual = true,
-  own_window_type = 'desktop',
-  own_window_transparent = true,
-  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-  stippled_borders = 0,
-  
--- Others --
-  cpu_avg_samples = 2,
-  net_avg_samples = 2,
-  double_buffer = true,
-  out_to_console = false,
-  out_to_stderr = false,
-  extra_newline = false,
-  update_interval = 1,
-  uppercase = false,
-  use_spacer = 'none',
-  show_graph_scale = false,
-  show_graph_range = false,
-  lua_load = '/home/shresthp/.config/conky/scripts/rings.lua',
-  lua_draw_hook_pre = 'ring_stats',
-  lua_draw_hook_post = 'draw_text',
+    -- Size and Position settings --
+    alignment = 'bottom_left',
+    gap_x = 60,
+    gap_y = 60,
+    maximum_width = 500,
+    minimum_height = 400,
+    minimum_width = 500,
+
+    -- Text settings --
+    use_xft = true,
+    font = 'Roboto:light:size=9',
+
+    -- Color Settings --
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    color1 = 'FFFFFF',
+    color2 = '7fff00',
+
+    -- Window Settings --
+    background = false,
+    border_width = 1,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    own_window = true,
+    own_window_colour = '000000',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    stippled_borders = 0,
+
+    -- Others --
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    double_buffer = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    update_interval = 1,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+    lua_load = '/home/shresthp/.config/conky/scripts/rings.lua',
+    lua_draw_hook_pre = 'ring_stats',
+    lua_draw_hook_post = 'draw_text',
 }
 
 conky.text = [[
