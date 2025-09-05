@@ -58,7 +58,7 @@ ${offset 0}${color2}${font Metropolis Black:size=60}${color1}${time %A}${font Ca
 ${offset 0}${voffset 10}${font Cantarell:size=15}${time %d %B %Y}${font Cantarell:size=1}
 ${image ~/.config/conky/res/bg.png -p 0,120}\
 ${execi 300 ~/.config/conky/scripts/weather.sh}\
-${offset 25}${voffset 23}${color2}${font weather icons:size=17}${execi 15 ~/.config/conky/scripts/weather-text-icon}${font}
+${offset 5}${voffset 23}${color2}${font weather icons:size=17}${execi 15 ~/.config/conky/scripts/weather-text-icon}${font}
 ${offset 67}${voffset -36}${color1}${font Cantarell:size=9}The Weather in ${execi 100 cat ~/.cache/weather.json | jq -r '.name'} is ${execi 100 cat ~/.cache/weather.json | jq -r '.weather[0].main'}. ${execi 100 cat ~/.cache/weather.json | jq '.main.temp' | awk '{print int($1+0.5)}'} °C
 ${offset 67}${voffset 0}${color1}${font Cantarell:size=9}Wind speed in your location is ${execi 100 (cat ~/.cache/weather.json | jq '.wind.speed')}km/h
 ${offset 67}${voffset 0}${color1}${font Cantarell:size=9}And Humidity is ${execi 100 (cat ~/.cache/weather.json | jq '.main.humidity')}%
@@ -67,4 +67,3 @@ ${offset 50}${voffset 55}${font Metropolis Medium:size=9}Cpu:${goto 165}Mem:${go
 ${offset 50}${voffset }${font Metropolis Medium:size=9}${cpu cpu0}%${goto 165}${memperc} %${goto 275}$fs_used_perc %
 ${voffset 30}${offset 0}${color1}${font Metropolis Medium:size=14}Time is ${time %I} : ${time %M} ${time %p}
 ]]
-
