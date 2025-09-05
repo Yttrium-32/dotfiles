@@ -28,6 +28,7 @@ DEPS += stow \
 		zoxide \
 		eza \
 		fd \
+		gperf \
 		pre-commit \
 		yay \
 		mpv \
@@ -35,7 +36,7 @@ DEPS += stow \
 		hunspell \
 		keepassxc
 
-AUR_DEPS += conky-cairo \
+AUR_DEPS += conky-cairo-wayland-git \
 			googledot-cursor-theme \
 			cpu-x-git \
 			tdrop-git \
