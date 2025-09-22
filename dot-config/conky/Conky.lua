@@ -48,7 +48,7 @@ conky.config = {
     use_spacer = 'none',
     show_graph_scale = false,
     show_graph_range = false,
-    lua_load = '/home/shresthp/.config/conky/scripts/rings.lua',
+    lua_load = '~/.config/conky/scripts/rings.lua',
     lua_draw_hook_pre = 'ring_stats',
     lua_draw_hook_post = 'draw_text',
 }
