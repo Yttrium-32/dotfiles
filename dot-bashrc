@@ -26,6 +26,7 @@ alias gcc="gcc -std=c99 -pedantic"
 # safer copy and move with rsync
 alias mv-r="rsync -r -h --no-i-r --info=progress2 --info=name0 --remove-source-files"
 alias cp-r="rsync -r -h --no-i-r --info=progress2 --info=name0"
+alias update-files="rsync -rhu --no-i-r --info=progress2 --info=NAME"
 
 alias ff="fastfetch"
 
