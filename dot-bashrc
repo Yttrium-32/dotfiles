@@ -45,8 +45,8 @@ alias ll='eza --icons --group-directories-first -la'   # show long listing of al
 stty ixany
 
 # Increase size of .bash_history
-export HISTSIZE=20000
-export HISTFILESIZE=20000
+export HISTSIZE=200000
+export HISTFILESIZE=200000
 
 # Ignore duplicates in .bash_history
 export HISTCONTROL=ignoredups:erasedups
