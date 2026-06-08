@@ -52,6 +52,30 @@ export HISTFILESIZE=200000
 # Ignore duplicates in .bash_history
 export HISTCONTROL=ignoredups:erasedups
 
+# ffmpeg command for embedding cover art into most music files
+embed-cover () {
+    local song_name="$1"
+    local song_wo_ext=${song_name%.*}
+    ffmpeg \
+        -i "$song_name" \
+        -i "$2" \
+        -map_metadata 0 -map 0 -map 1 \
+        -acodec copy \
+        "$song_wo_ext"_with_cover.mp3
+}
+
+# ffmpeg command for embedding cover art into flac files
+embed-cover-flac () {
+    local song_name="$1"
+    local song_wo_ext=${song_name%.*}
+    ffmpeg \
+        -i "$song_name" \
+        -i "$2" \
+        -map_metadata 0 -map 0 -map 1 \
+        -acodec copy -disposition:v attached_pic \
+        song_with_cover.flac
+}
+
 # ffmpeg command to compress videos with maximum compatibility
 ffcompress-video () {
     ffmpeg -i "$1" \
