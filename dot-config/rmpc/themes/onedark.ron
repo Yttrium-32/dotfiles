@@ -164,11 +164,6 @@
     ),
 
     components: {
-        "header_tab_bar": Split(direction: Horizontal, panes: [
-            (size: "50%", borders: "NONE", pane: Component("tab_bar_left")),
-            (size: "50%", borders: "NONE", pane: Component("tab_bar_right")),
-        ]),
-
         "header": Split(direction: Vertical, panes: [
             (
                 size: "1", borders: "NONE",
@@ -176,6 +171,11 @@
                     (size: "100%", borders: "NONE", pane: Component("header_tab_bar")),
                 ])
             ),
+        ]),
+
+        "header_tab_bar": Split(direction: Horizontal, panes: [
+            (size: "50%", borders: "NONE", pane: Component("tab_bar_left")),
+            (size: "50%", borders: "NONE", pane: Component("tab_bar_right")),
         ]),
 
         "progress_bar": Split(direction: Vertical, panes: [(
