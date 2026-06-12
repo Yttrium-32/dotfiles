@@ -95,7 +95,47 @@
     ],
     layout: Split(direction: Vertical, panes: [
         (size: "1", borders: "NONE", pane: Component("header")),
-        (size: "100%", borders: "TOP", pane: Pane(TabContent)),
+
+        (
+            size: "100%",
+            borders: "TOP",
+            border_title: [
+                (kind: Text("  "), style: (fg: "#61AFEF", modifiers: "Bold")),
+                (kind: Property(Status(RepeatV2(
+                    on_label: "z",
+                    off_label: "z",
+                    on_style: (fg: "#56B6C2", modifiers: "Bold"),
+                    off_style: (fg: "#ABB2BF", modifiers: "Dim"),
+                )))),
+                (kind: Property(Status(RandomV2(
+                    on_label: "x",
+                    off_label: "x",
+                    on_style: (fg: "#56B6C2", modifiers: "Bold"),
+                    off_style: (fg: "#ABB2BF", modifiers: "Dim"),
+                )))),
+                (kind: Property(Status(ConsumeV2(
+                    on_label: "c",
+                    off_label: "c",
+                    oneshot_label: "c",
+                    on_style: (fg: "#56B6C2", modifiers: "Bold"),
+                    off_style: (fg: "#ABB2BF", modifiers: "Dim"),
+                    oneshot_style: (fg: "#E06C75", modifiers: "Dim"),
+                )))),
+                (kind: Property(Status(SingleV2(
+                    on_label: "v",
+                    off_label: "v",
+                    oneshot_label: "v",
+                    on_style: (fg: "#56B6C2", modifiers: "Bold"),
+                    off_style: (fg: "#ABB2BF", modifiers: "Dim"),
+                    oneshot_style: (fg: "#E06C75", modifiers: "Dim"),
+                )))),
+                (kind: Text("  ──"),style: (fg: "#61AFEF", modifiers: "Bold")),
+            ],
+            border_title_position: Top,
+            border_title_alignment: Right,
+            pane: Pane(TabContent)
+        ),
+
         (size: "1", borders: "NONE", pane: Component("progress_bar")),
         (size: "1", borders: "NONE", pane: Component("footer")),
     ]),
