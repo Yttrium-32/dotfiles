@@ -246,23 +246,6 @@
             ))
         )]),
 
-        "song_info_dummy": Split(direction: Horizontal, panes: [(
-            size: "100%",
-            borders: "NONE",
-            pane: Pane(
-                Property(
-                    content: [(
-                        kind: Text("Test Song - Test Artist"),
-                        style: (
-                            fg: "#56B6C2",
-                            modifiers: "Bold"
-                        )
-                    )],
-                    align: Left
-                )
-            )
-        )]),
-
         "song_info": Split(direction: Horizontal, panes: [(
             size: "100%",
             pane: Pane(
