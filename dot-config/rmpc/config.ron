@@ -49,14 +49,11 @@
     ),
 
     keybinds: (
+        clear: true,
         global: {
             "q":          Quit,
             "?":          ShowHelp,
             ":":          CommandMode,
-            "oo":         ShowOutputs,
-            "op":         ShowDecoders,
-            "od":         ShowDownloads,
-            "oP":         Partition(),
 
             "z":          ToggleRepeat,
             "x":          ToggleRandom,
@@ -75,10 +72,8 @@
             ",":          VolumeDown,
 
             "<Tab>":      NextTab,
-            "gt":         NextTab,
 
             "<S-Tab>":    PreviousTab,
-            "gT":         PreviousTab,
 
             "1":          SwitchToTab("Queue-Cava"),
             "2":          SwitchToTab("Directories"),
@@ -91,20 +86,24 @@
             "<C-2>":      SwitchToTab("Queue-Lyrics"),
             "<C-3>":      SwitchToTab("Queue-AlbumArt"),
 
-            "<C-u>":      Update,
-            "<C-U>":      Rescan,
+            "u":          Update,
+            "U":          Rescan,
             "R":          AddRandom,
         },
         navigation: {
-            "<C-c>":      Close,
             "<Esc>":      Close,
+
             "<CR>":       Confirm,
+
             "k":          Up,
             "<Up>":       Up,
+
             "j":          Down,
             "<Down>":     Down,
+
             "h":          Left,
             "<Left>":     Left,
+
             "l":          Right,
             "<Right>":    Right,
 
@@ -116,11 +115,15 @@
             "<C-w>l":     PaneRight,
             "<C-Right>":  PaneRight,
 
-            "K":          MoveUp,
-            "J":          MoveDown,
+            "<A-k>":      MoveUp,
+            "<A-Up>":     MoveUp,
+
+            "<A-j>":      MoveDown,
+            "<A-Down>":   MoveDown,
 
             "<C-u>":      UpHalf,
             "<C-d>":      DownHalf,
+
             "<C-b>":      PageUp,
             "<PageUp>":   PageUp,
             "<C-f>":      PageDown,
@@ -140,7 +143,6 @@
             "D":          Delete,
             "<C-r>":      Rename,
 
-            "I":          FocusInput,
             "i":          ShowInfo,
             "<C-z>":      ContextMenu(),
 
@@ -148,10 +150,12 @@
             "<C-s>a":     Save(kind: Modal(all: true, duplicates_strategy: Ask)),
         },
         queue: {
+            "<CR>":       Play,
+
             "d":          Delete,
             "D":          DeleteAll,
-            "<CR>":       Play,
-            "C":          JumpToCurrent,
+
+            "o":          JumpToCurrent,
             "Z":          Shuffle,
         },
     ),
